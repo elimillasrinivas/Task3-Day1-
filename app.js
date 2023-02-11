@@ -20,9 +20,6 @@ async function movie(){
         await fetch(`http://www.omdbapi.com/?t=${movieName}&apikey=79bc243a`)
          .then (res=>res.json())
          .then(data=>{
-            if(data){
-                errorTag.innerHTML = '<img src="Loading_icon.gif">';
-            }
             else{
 
                 imgTag.setAttribute("src", `${data.Poster}`)
